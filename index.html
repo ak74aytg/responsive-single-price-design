@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Single Price Grid Component</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: hsl(204, 43%, 93%);
+      color: #fff;
+      font-family: karla, sans-serif;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h3 {
+      font-family: karla;
+      font-weight: 600;
+      color: hsla(179, 62%, 43%, 0.8);
+    }
+
+    .sub1 {
+      font-family: karla;
+      font-weight: 600;
+      color: hsl(71, 73%, 54%);
+    }
+
+    .sub2 {
+      font-family: karla;
+      font-weight: 600;
+    }
+
+    p {
+      color: hsl(218, 22%, 67%);
+    }
+
+    .container {
+
+      width: 48vw;
+      height: 70vh;
+
+      position: absolute;
+      top: 15vh;
+      left: 26vw;
+      border-radius: 10px;
+    }
+
+    .row:first-of-type {
+      width: 100%;
+      height: 45%;
+      max-height: 500px;
+      background-color: #fff;
+      position: absolute;
+      padding: 10px 35px;
+      box-sizing: border-box;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      color: blue;
+    }
+
+    .row:last-of-type {
+      width: 100%;
+      height: 55%;
+      max-height: 500px;
+      display: flex;
+      position: absolute;
+      top: 45%;
+
+
+    }
+
+    .col:first-of-type {
+      width: 50%;
+      height: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      padding: 10px 35px;
+      padding-bottom: 20px;
+      border-bottom-left-radius: 10px;
+      background-color: hsla(179, 62%, 43%, 1);
+      overflow: hidden;
+    }
+
+    .col:last-of-type {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      padding: 10px 35px;
+      box-sizing: border-box;
+      border-bottom-right-radius: 10px;
+      background-color: hsla(179, 62%, 43%, 0.6);
+      text-align: left;
+
+    }
+
+    .price {
+      display: flex;
+      color: hsla(204, 43%, 93%, 0.6);
+      align-items: center;
+
+    }
+
+    span {
+      font-weight: 700;
+      font-size: xx-large;
+      margin-right: 10px;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      margin-top: 15px;
+      border-radius: 8px;
+      border: 0px;
+      background-color: hsl(71, 73%, 54%);
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width:600px) {
+      .container {
+        width: 80vw;
+        display: absolute;
+        top: 15vh;
+        left: 10vw;
+      }
+    }
+
+    @media screen and (max-width:800px) {
+      .container {
+        width: 80vw;
+        display: absolute;
+        top: 15vh;
+        left: 10vw;
+      }
+
+      .row:last-of-type {
+        height: 300px;
+      }
+    }
+
+    @media screen and (max-width:980px) {
+      .container {
+        width: 80vw;
+        display: absolute;
+        top: 15vh;
+        left: 10vw;
+      }
+      .row:last-of-type {
+        height: 320px;
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      body {
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        width: 80vw;
+        height: 900px;
+        position: absolute;
+        top: 15vh;
+        left: 10vw;
+      }
+
+      .row:first-of-type {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        top: 0;
+      }
+
+      .row:last-of-type {
+        width: 100%;
+        position: absolute;
+        top: 300px;
+      }
+
+      .col:first-of-type {
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        border-radius: 0;
+      }
+
+      .col:last-of-type {
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        top: 250px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row">
+      <h3>Join our community</h3>
+      <h4 class="sub1">30-day, hassle-free money back guarantee</h4>
+
+      <p>Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h4 class="sub2">Monthly Subscription</h4>
+
+        <p class="price"><span>&dollar;29</span> per month</p>
+
+        <p style="color:hsla(204, 43%, 93%, 1);font-size: 14px;">Full access for less than &dollar;1 a day</p>
+
+        <button type="submit">Sign Up</button>
+
+      </div>
+      <div class="col">
+        <h4 class="sub2">Why Us</h4>
+        <p style="color:hsla(204, 43%, 93%, 1);font-size: 14px; line-height: 1.5;">Tutorials by industry experts<br>
+          Peer &amp; expert code review<br>
+          Coding exercises<br>
+          Access to our GitHub repos <br>
+          Community forum<br>
+          Flashcard decks<br>
+          New videos every week</p>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Akshay</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
